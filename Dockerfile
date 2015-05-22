@@ -15,3 +15,5 @@ RUN chown -R perl6:perl6 /home/perl6
 
 USER perl6
 WORKDIR /home/perl6
+
+CMD /bin/bash
