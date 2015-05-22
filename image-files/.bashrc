@@ -16,7 +16,7 @@ fi
 
 PS1='\[\033[1;31m\]\u@\h\[\033[1;31m\]:\[\033[00m\]\w\[\033[38;5;55m\]$(__git_ps1 " [%s] ")\[\033[1;31m\]\$ \[\033[00m\] '
 
-perl6() {
+docker-perl6() {
     docker run -it rakudo-star /bin/bash
 }
 
