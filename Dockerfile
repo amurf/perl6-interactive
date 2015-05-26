@@ -2,9 +2,10 @@ FROM rakudo-star
 MAINTAINER Ashley Murphy <irashp@gmail.com>
 
 RUN apt-get update && \
-    apt-get install -y build-essential vim
-
-
+    apt-get install -y build-essential vim && \
+    git clone --recursive git://github.com/tadzik/panda.git && \
+    cd panda && \
+    perl6 bootstrap.pl
 
 COPY image-files/.vim /home/perl6/.vim
 COPY image-files/.vimrc /home/perl6/
