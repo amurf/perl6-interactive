@@ -1,20 +1,12 @@
-FROM rakudo-star
+FROM sdt4docker/perl6-moarvm
 MAINTAINER Ashley Murphy <irashp@gmail.com>
 
 RUN apt-get update && \
-    apt-get install -y build-essential vim && \
-    git clone --recursive git://github.com/tadzik/panda.git && \
-    cd panda && \
-    perl6 bootstrap.pl
+    apt-get install -y build-essential vim ack-grep
 
-COPY image-files/.vim /home/perl6/.vim
-COPY image-files/.vimrc /home/perl6/
-COPY image-files/.bashrc /home/perl6/
-COPY image-files/.git-completion.sh /home/perl6/
-
-RUN chown -R perl6:perl6 /home/perl6
-
-USER perl6
-WORKDIR /home/perl6
+COPY image-files/.vim /root/.vim
+COPY image-files/.vimrc /root/
+COPY image-files/.bashrc /root/
+COPY image-files/.git-completion.sh /root/
 
 CMD /bin/bash

@@ -36,8 +36,8 @@ au BufWinEnter * match TrailingWhitespace /\s\+$/
 au BufNewFile,BufRead *.rs set filetype=rust
 au BufNewFile,BufRead *.dart set filetype=dart
 au BufNewFile,BufRead *.psgi set filetype=perl
-au BufNewFile,BufRead *.pm6 set filetype=perl6
-au BufNewFile,BufRead *.pl6 set filetype=perl6
+au BufNewFile,BufRead *.pm6 set filetype=perl
+au BufNewFile,BufRead *.pl6 set filetype=perl
 au BufNewFile,BufRead *.scala set filetype=scala
 
 let loaded_matchparen=1
