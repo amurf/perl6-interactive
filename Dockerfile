@@ -1,4 +1,4 @@
-FROM sdt4docker/perl6-moarvm
+FROM rakudo-star
 MAINTAINER Ashley Murphy <irashp@gmail.com>
 
 RUN apt-get update && \
